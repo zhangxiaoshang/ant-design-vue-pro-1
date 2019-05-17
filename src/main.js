@@ -5,7 +5,6 @@ import router from "./router";
 import store from "./store/index.js";
 import enUS from "./locale/enUS";
 import zhCN from "./locale/zhCN";
-import queryString from "query-string";
 import {
   Button,
   Layout,
@@ -42,7 +41,7 @@ Vue.use(Auth);
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-  locale: queryString.parse(location.search).locale || "zhCN",
+  locale: "zhCN",
   messages: {
     zhCN: { message: zhCN },
     enUS: { message: enUS }
